@@ -1,57 +1,18 @@
-FOOBARR
 ====================== Swimlanes for QBR goals ==============
-issueFunction in linkedIssuesOf
-("
-    key=kova-10 
-   
-") OR
-    (
-      issueFunction in subtasksOf("type=Story and issuefunction in linkedissuesof(\"key=kova-10\")")
-    )
-OR key=kova-10
-OR issuefunction in subtasksOf("key=kova-10")
-
-= = = = = = 
-issueFunction in linkedIssuesOf
-("
-    key=kova-1 
-   
-") OR
-    (
-      issueFunction in subtasksOf("type=Story and issuefunction in linkedissuesof(\"key=kova-1\")")
-    )
-OR key=kova-1
-OR issuefunction in subtasksOf("key=kova-1")
-
-
-==============
-
 
 issueFunction in linkedIssuesOf
 ("
-    key=kova-1 
+    key=ISSUEKEY 
    
 ") OR
     (
-      issueFunction in subtasksOf("type=Story and issuefunction in linkedissuesof(\"key=kova-1\")")
+      issueFunction in subtasksOf("type=Story and issuefunction in linkedissuesof(\"key=ISSUEKEY\")")
     )
-OR key=kova-1
-OR issuefunction in subtasksOf("key=kova-1")
+OR key=ISSUEKEY
+OR issuefunction in subtasksOf("key=ISSUEKEY")
 
+============== Filter by Team ==============
 
-issueFunction in linkedIssuesOf
-("
-    key=kova-9 
-   
-") OR
-    (
-      issueFunction in subtasksOf("type=Story and issuefunction in linkedissuesof(\"key=kova-9\")")
-    )
-OR key=kova-9
-OR issuefunction in subtasksOf("key=kova-9")
-
-
---------
 Gimme all issues with 
   the label Kortit
   and their subtasks
@@ -64,19 +25,3 @@ OR (issuefunction in linkedissuesof("labels in (kortit)"))
 OR (issuefunction in subtasksOf("issuefunction in linkedissuesof(\"labels in (kortit)\")
                                 ")
    )
-
-===========
-issueFunction in linkedIssuesOf
-("
-    key=kokura-1 
-   
-") OR
-
-
-    (
-      issueFunction in subtasksOf("type=Story and issuefunction in linkedissuesof(\"key=kokura-1\")")
-    )
-OR key=KOKURA-1
-OR issuefunction in subtasksOf("key=kokura-1")
-
-
