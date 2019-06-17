@@ -14,20 +14,21 @@ OR issuefunction in subtasksOf("key=ISSUEKEY")
 ============== Filter by Team ==============
 
 Gimme all issues with 
-  the label Kortit
+  the label LABEL
   and their subtasks
   and the Features linked to them
   and their subtasks
+-----
 
-labels in (kortit) 
-OR (issueFunction in subtasksOf("labels in (kortit)"))
-OR (issuefunction in linkedissuesof("labels in (kortit)")) 
-OR (issuefunction in subtasksOf("issuefunction in linkedissuesof(\"labels in (kortit)\")
+labels in (LABEL) 
+OR (issueFunction in subtasksOf("labels in (LABEL)"))
+OR (issuefunction in linkedissuesof("labels in (LABEL)")) 
+OR (issuefunction in subtasksOf("issuefunction in linkedissuesof(\"labels in (LABEL)\")
                                 ")
    )
 
 ============== Filter by QBR Goal ==============
 
 QBR Goal = Feature
-
-type = feature OR (issueFunction in subtasksOf("type in (Feature)"))
+-----
+type = feature
