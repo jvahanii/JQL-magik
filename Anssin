@@ -25,3 +25,9 @@ OR (issuefunction in linkedissuesof("labels in (kortit)"))
 OR (issuefunction in subtasksOf("issuefunction in linkedissuesof(\"labels in (kortit)\")
                                 ")
    )
+
+============== Filter by QBR Goal ==============
+
+QBR Goal = Feature
+
+type = feature OR (issueFunction in subtasksOf("type in (Feature)"))
