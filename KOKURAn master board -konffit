@@ -1,4 +1,19 @@
-====================== Swimlanes for QBR goals ==============
+
+====================== Swimlanes for QBR goals (old, without native epic) ==============
+# Not tested yet for Stories subtasks!
+
+issueFunction in issuesInEpics
+("
+    key=EPICKEY
+   
+") OR
+    (
+      issueFunction in subtasksOf("type=Story and issuefunction in issuesInEpics(\"key=KOVA-17\")")
+    )
+OR key=KOVA-17
+OR issuefunction in subtasksOf("key=KOVA-17")
+
+====================== Swimlanes for QBR goals (old, without native epic) ==============
 
 issueFunction in linkedIssuesOf
 ("
