@@ -1,5 +1,5 @@
 
-====================== Swimlanes for QBR goals (old, without native epic) ==============
+====================== Swimlanes for QBR goals  ==============
 # Not tested yet for Stories subtasks!
 
 issueFunction in issuesInEpics
@@ -8,37 +8,24 @@ issueFunction in issuesInEpics
    
 ") OR
     (
-      issueFunction in subtasksOf("type=Story and issuefunction in issuesInEpics(\"key=KOVA-17\")")
+      issueFunction in subtasksOf("type=Story and issuefunction in issuesInEpics(\"key=EPICKEY\")")
     )
-OR key=KOVA-17
-OR issuefunction in subtasksOf("key=KOVA-17")
-
-====================== Swimlanes for QBR goals (old, without native epic) ==============
-
-issueFunction in linkedIssuesOf
-("
-    key=ISSUEKEY 
-   
-") OR
-    (
-      issueFunction in subtasksOf("type=Story and issuefunction in linkedissuesof(\"key=ISSUEKEY\")")
-    )
-OR key=ISSUEKEY
-OR issuefunction in subtasksOf("key=ISSUEKEY")
+OR key=EPICKEY
+OR issuefunction in subtasksOf("key=EPICKEY")
 
 ============== Filter by Team ==============
 
 Gimme all issues with 
   the label LABEL
   and their subtasks
-  and the Features linked to them
+  and the Stories linked to them
   and their subtasks
 -----
 
 labels in (LABEL) 
 OR (issueFunction in subtasksOf("labels in (LABEL)"))
-OR (issuefunction in linkedissuesof("labels in (LABEL)")) 
-OR (issuefunction in subtasksOf("issuefunction in linkedissuesof(\"labels in (LABEL)\")
+OR (issuefunction in issuesInEpics("labels in (LABEL)")) 
+OR (issuefunction in subtasksOf("issuefunction in issuesInEpics(\"labels in (LABEL)\")
                                 ")
    )
 
