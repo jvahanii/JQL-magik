@@ -1,5 +1,5 @@
 
-====================== Swimlanes for QBR goals  ==============
+====================== Swimlanes for Business goals  ==============
 
 issueFunction in issuesInEpics
 ("
@@ -11,6 +11,17 @@ issueFunction in issuesInEpics
     )
 OR key=EPICKEY
 OR issuefunction in subtasksOf("key=EPICKEY")
+
+============== many epics on a single swimlane=========
+issueFunction in issuesInEpics("
+    key in (KOVA-200, KOVA-201, KOVA-202, KOVA-203, KOVA-204)
+") OR
+    (
+      issueFunction in subtasksOf("type=Story and issuefunction in issuesInEpics(\"key in (KOVA-200, KOVA-201, KOVA-202, KOVA-203, KOVA-204)\")")
+    )
+OR key in (KOVA-200, KOVA-201, KOVA-202, KOVA-203, KOVA-204)
+OR issuefunction in subtasksOf("key in (KOVA-200, KOVA-201, KOVA-202, KOVA-203, KOVA-204)")
+
 
 ============== Filter by Team ==============
 
