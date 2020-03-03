@@ -1,3 +1,13 @@
+=== Cloud Scriptrunner, how to fetch Epics of a certain label and all their Stories and Subtasks ===
+>> Need two filters
+1)
+labels in (Theme_InternationalExpansion)  
+OR issueFunction in subtasksOf("labels in (Theme_InternationalExpansion)") 
+OR issuefunction in issuesInEpics("labels in (Theme_InternationalExpansion)")
+
+2)
+filter = Theme_IntlExp_EpicsFeatures OR issuefunction in subtasksOf("filter=Theme_IntlExp_EpicsFeatures")
+
 
 ====================== Swimlanes for Business goals  ==============
 
