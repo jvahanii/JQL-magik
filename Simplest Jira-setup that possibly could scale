@@ -1,3 +1,11 @@
+===============
+issue in linkedIssues(KEY = [KEY OF OKR],"relates to") 
+or issueFunction in  linkedIssuesOfRecursiveLimited("KEY = [KEY OF OKR]",2) 
+or KEY = [KEY OF OKR] 
+or
+(issueFunction in subtasksOf("issuefunction in linkedissuesofrecursivelimited(\"KEY = [KEY OF OKR]\",2)"))
+
+
 === Cloud Scriptrunner, how to fetch Epics of a certain label and all their Stories and Subtasks ===
 >> Need two filters
 1)
